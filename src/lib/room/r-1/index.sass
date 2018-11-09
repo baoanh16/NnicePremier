@@ -1,0 +1,98 @@
+.canhcam-room-1
+	background: url('../img/about_bg.jpg') no-repeat
+	background-size: cover
+	+pad(5rem 0)
+	+media-breakpoint-up(md)
+		+pad(11rem 0)
+	+media-breakpoint-up(lg)
+		+pad(11rem 0)
+	+media-breakpoint-up(xl)
+		+pad(11rem 0)
+	.item
+		+pad(0 15px)
+		+media-breakpoint-up(md)
+			+pad(1px)
+		figure
+			margin-bottom: r(40px)
+			.img
+				img
+			figcaption
+				background: url('../img/room_bg.jpg')
+				+pad(1.25rem 3rem)
+				+media-breakpoint-up(md)
+					+pad(1.75rem 4.5rem)
+				+media-breakpoint-up(lg)
+					+pad(3rem 6.5rem)
+				h4
+					font-size: r(20px)
+					color: white
+					text-transform: uppercase
+					+media-breakpoint-up(md)
+						font-size: r(30px)
+					a
+						color: white
+						text-decoration: none
+				.btn-wrap
+					.btn
+						+pad(null .7rem)
+						font-size: r(13px)
+						color: white
+						&:first-child
+							padding-left: 0
+							position: relative
+							&:before
+								content: ''
+								+pos(abs,50% -3px null null)
+								transform: translateY(-50%)
+								width: 1px
+								height: 1rem
+								background: white
+						+media-breakpoint-up(sm)
+							font-size: 1rem
+							+pad(null 1rem)
+		+media-breakpoint-up(md)
+			figure
+				margin-bottom: 0
+				
+.fancybox-is-open 
+	.fancybox-bg
+		opacity: .95
+	.fancybox-inner
+		.fancybox-slide--image
+			+pad(20px 0)
+		.fancybox-caption
+			text-align: left
+			bottom: 40px
+			+media-breakpoint-up(lg)
+				bottom: 0
+			&:before
+				content: none
+			.caption-wrap
+				flex-direction: column
+				+media-breakpoint-up(lg)
+					flex-direction: row
+					align-items: center
+				h4
+					position: fixed
+					top: r(65px)
+					text-align: center
+					width: 100%
+					color: white
+					left: 0
+					font-size: 1.85rem
+					text-transform: uppercase
+					+media-breakpoint-up(lg)
+						position: initial
+						font-size: r(30px)
+						font-weight: 700
+						text-align: left
+						width: fit-content
+				p
+					font-size: r(15px)
+					color: color-rgba(white,.6)
+					strong
+						color: white
+						font-weight: 600
+						font-size: r(16px)
+					+media-breakpoint-up(lg)
+						margin-left: 1.75rem

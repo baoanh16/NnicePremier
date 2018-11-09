@@ -1,0 +1,118 @@
+p ,ul ,h1,h2,h3,h4,h5,h6,figure,div, *
+	margin: 0
+	padding: 0
+html, body
+	font-family: 'Montserrat', sans-serif
+	font-size: 14px
+	line-height: 1.5
+	font-weight: 400
+	overflow: initial
+	// max-width: 1600px
+	margin: auto
+@media (min-width: 1600px)
+	.container
+		max-width: 100%
+	.container-fluid
+		max-width: 100%
+a, span
+	+transition(all .2s ease-in-out)
+
+.menu-toggle
+	width: 30px
+	height: 30px
+	background: color-rgba(white)
+	box-shadow: 0 0 .5rem white
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: flex-end
+	overflow: hidden
+	+pad(5px)
+	span
+		+mar(1.5px 0)
+		width: 20px
+		height: 2px
+		display: block
+		background: color-get($mau, hong)
+		&:nth-child(1)
+			animation: burgeraction .6s 0s linear infinite
+		&:nth-child(2)
+			animation: burgeraction .6s .1s linear infinite
+		&:nth-child(3)
+			animation: burgeraction .6s .2s linear infinite
+	&.active
+		span
+			&:nth-child(2)
+				display: none
+			&:nth-child(1), &:nth-child(3)
+				+pos(abs, 50% null null 50%)
+				+mar(0)
+				width: 25px
+			&:nth-child(1)
+				animation: burgeraction .6s 0s linear infinite
+				transform: translate(-50%, -50%) rotate(-45deg)
+			&:nth-child(3)
+				animation: burgeraction .6s 0s linear infinite
+				transform: translate(-50%, -50%) rotate(45deg)
+@keyframes burgeraction
+	0%
+		width: 20px
+	50%
+		width: 10px
+	100%
+		width: 20px
+
+img
+	max-width: 100%
+	width: 100%
+	
+.main-title
+	font-size: r(45px)
+	+media-breakpoint-up(md)
+		font-size: r(60px)
+		
+	margin-bottom: 2.5rem
+	color: white
+	text-transform: uppercase
+	&.center
+		text-align: center
+	&.left
+		text-align: left
+	&.right
+		text-align: right
+
+.ModuleContent
+	position: relative
+.pages.newspager
+	position: absolute
+	bottom: 40px
+	width: 100%
+	left: 0
+	+media-breakpoint-up(md)
+		bottom: 80px
+	+media-breakpoint-up(lg)
+		bottom: 80px
+	+media-breakpoint-up(xl)
+		bottom: 80px
+	.pagination
+		display: flex
+		justify-content: center
+		list-style-type: none
+		li
+			margin: 0 10px
+			a, span
+				border-radius: 50%
+				background-color: rgba(231, 29, 43, 0.051)
+				box-shadow: 0.342px -0.94px 5px 0px rgba(231, 174, 178, 0.35), inset 0px 1px 5px 0px rgba(231, 174, 178, 0.6)
+				width: 45px
+				height: 45px
+				display: flex
+				justify-content: center
+				align-items: center
+				font-size: 18px
+				font-weight: 500
+				color: white
+			&:hover
+				a, span
+					color: #ffba00
+					text-decoration: none

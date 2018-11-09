@@ -1,0 +1,55 @@
+.canhcam-about-1
+	background: url('../img/about_bg.jpg') no-repeat
+	background-size: cover
+	.img
+		height: 100%
+		display: flex
+		align-items: center
+	.text
+		display: flex
+		flex-direction: column
+		justify-content: center
+		height: 100%
+		+pad(1.5rem 2rem 2.5rem 2rem)
+		color: white
+		font-size: 13px
+		+media-breakpoint-up(md)
+			font-size: 14px
+		+media-breakpoint-up(lg)
+			font-size: 15px
+		+media-breakpoint-up(xl)
+			font-size: 16px
+		h3
+			font-size: r(30px)
+			font-weight: 700
+			color: white
+			text-transform: uppercase
+			white-space: pre-wrap
+			+lh(1)
+			margin-bottom: 1rem
+			+media-breakpoint-up(lg)
+				margin-bottom: 2rem
+		p
+			font-size: r(13px)
+			color: white
+			margin-bottom: 1rem
+			&:last-child
+				margin-bottom: 0
+		+media-breakpoint-up(lg)
+			h3
+				font-size: r(45px)
+				margin-bottom: 2rem
+			p
+				font-size: r(14.5px)
+				margin-bottom: 1.5rem
+			&.about-1
+				+pad(r(20px) r(30px) 0 r(20px))
+		+media-breakpoint-up(xl)
+			h3
+				font-size: r(60px)
+				margin-bottom: 4rem
+			p
+				font-size: r(16px)
+				margin-bottom: 2rem
+			&.about-1
+				+pad(0 r(60px))

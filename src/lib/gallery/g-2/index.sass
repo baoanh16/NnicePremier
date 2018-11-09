@@ -1,0 +1,54 @@
+.canhcam-gallery-2
+	+pad(r(40px) 0)
+	+media-breakpoint-up(lg)
+		+pad(r(60px) 0)
+	.video-list
+		position: relative
+		.owl-stage-outer
+			+media-breakpoint-up(sm)
+				+pad(50px 0)
+			.owl-item
+				transition: all .7s ease-in-out
+				.item
+					position: relative
+					.img-wrap
+						background: black
+						img
+							opacity: .6
+					.play-btn
+						transition: all .7s ease-in-out
+						opacity: 0
+						width: 80px
+						height: 80px
+						+pos(abs, calc(50% - 40px) null null calc(50% - 40px))
+				+media-breakpoint-up(sm)
+					&.center
+						z-index: 500
+						transform: scale(1.2)
+						.item
+							.play-btn
+								opacity: 1
+		.owl-nav
+			text-align: center
+			margin-top: 30px
+			button
+				+mar(0 15px)
+				span
+					+fz(r(30px))
+					color: rgb(255, 255, 255)
+					text-transform: uppercase
+					text-shadow: 0px 0px 7.4px rgba(255, 228, 0, 0.26)
+			+media-breakpoint-up(md)
+				margin-top: 0
+				button
+					+mar(0)
+					+pos(abs,50% null null null)
+					transform: translateY(-50%)
+					span
+						font-size: r(60px)
+					&.owl-prev
+						left: 15%
+					&.owl-next
+						right: 15%
+					&:focus
+						outline: 0

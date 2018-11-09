@@ -1,0 +1,99 @@
+.canhcam-menu-1
+	background: url('../img/about_bg.jpg') no-repeat
+	background-size: cover
+	.item
+		.img
+		.text
+			display: flex
+			flex-direction: column
+			justify-content: center
+			height: 100%
+			padding: 1.5rem r(15px) 2.5rem r(15px)
+			h2
+				+lh(calc(70 / 60))
+				+fz(r(30px))
+				margin-bottom: 1rem
+				br
+					display: none
+			p
+				color: white
+				+fz(r(14px))
+				margin-bottom: 1rem
+			.btn-viewmore
+				text-transform: uppercase
+				color: white
+				+pad(.8rem 4rem .8rem 2.35rem)
+				border: 0
+				+btn-nm
+				border-radius: 10px
+				+fz(1rem)
+				&:focus, &:active
+					outline: 0
+				&:hover
+					+btn-hover
+					box-shadow: none
+	+media-breakpoint-up(md)
+		.item
+			.text
+				+pad(0 r(30px))
+				h2
+					+fz(r(35px))
+					margin-bottom: 1.5rem
+					br
+						display: block
+				p
+					margin-bottom: 1.5rem
+			&.item-odd
+				.text
+					text-align: left
+			&.item-even
+				.text
+					text-align: right
+	+media-breakpoint-up(lg)
+		.item
+			.text
+				h2
+					+fz(r(60px))
+					margin-bottom: 2rem
+				p
+					margin-bottom: 2rem
+			&.item-odd
+				.text
+					text-align: left
+					padding: 0 r(40px)
+			&.item-even
+				.text
+					text-align: right
+					padding: 0 r(40px)
+	+media-breakpoint-up(xl)
+		.item
+			.text
+				h2
+					+fz(r(60px))
+					margin-bottom: 2rem
+				p
+					margin-bottom: 2rem
+			&.item-odd
+				.text
+					text-align: left
+					padding: 0 20% 0 r(60px)
+			&.item-even
+				.text
+					text-align: right
+					padding: 0 r(60px) 0 20%
+	@media (min-width: 1440px)
+		.item
+			.text
+				h2
+					+fz(r(60px))
+					margin-bottom: 2rem
+				p
+					margin-bottom: 2rem
+			&.item-odd
+				.text
+					text-align: left
+					padding: 0 25% 0 r(60px)
+			&.item-even
+				.text
+					text-align: right
+					padding: 0 r(60px) 0 25%

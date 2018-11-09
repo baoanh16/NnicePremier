@@ -1,0 +1,59 @@
+header.canhcam-header-1
+	.header-wrap.d-lg-none
+		.container
+			//- #logo
+			#language
+			#facebook
+			#sound-icon
+			.menu-toggle
+				span
+				span
+				span
+	.container-fluid
+		.mobile-menu.row.no-gutters
+			.col-lg-5.left-menu
+				.menu
+					ul.navbar-nav
+						li.nav-item
+							a.nav-link(href='about.html') Giới thiệu
+						li.nav-item
+							a.nav-link(href='room.html') Phòng hát
+						li.nav-item
+							a.nav-link(href='menu.html') Thực đơn
+			.col-lg-auto.logo-wrap.d-none.d-lg-block(map-to="#logo")
+				.logo
+					a(href="http://localhost:9999/")
+						img(src="./img/logo.png", alt="")
+			.col.right-menu
+				.row.no-gutters
+					.col-12.col-lg
+						.menu
+							ul.navbar-nav
+								li.nav-item
+									a.nav-link(href='gallery.html') Thư viện
+								li.nav-item
+									a.nav-link(href='contact.html') Liên Hệ
+					.col-12.col-lg-auto
+						.social
+							.language.d-none.d-lg-block(map-to="#language")
+								a(href="#") EN
+							.facebook.d-none.d-lg-block(map-to="#facebook")
+								a(href="#!")
+									span.fab.fa-facebook-f
+							.sound-icon.d-none.d-lg-block(map-to="#sound-icon")
+								a(href="#!")
+									svg(width='24', height='24', version='1.1', xmlns='http://www.w3.org/2000/svg')
+										rect(x='1', y='18', width='2', height='5')
+										rect(x='6', y='9', width='2', height='14')
+										rect(x='11', y='16', width='2', height='7')
+										rect(x='16', y='14', width='2', height='9')
+										rect(x='21', y='18', width='2', height='5')
+							.hotline
+								a(href="#!")
+									.icon
+										img.d-lg-none(src="./img/hotline_pink.png")
+										img.d-none.d-lg-block(src="./img/hotline_icon.png", alt="")
+									.link
+										span +0123 456 789
+										br
+										span HOTLINE

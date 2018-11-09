@@ -1,0 +1,33 @@
+.gallery
+	main
+		background: url('../img/about_bg.jpg') no-repeat
+		background-size: cover
+.canhcam-gallery-1
+	+pad(r(40px) 0 0 0)
+	+media-breakpoint-up(lg)
+		+pad(9.5rem 0 0 0)
+	.item
+		text-decoration: none
+		display: block
+		margin-bottom: 30px
+		figure
+			figcaption
+				background-color: rgba(255, 255, 255, 0.302)
+				box-shadow: 0.342px -0.94px 5px 0px rgba(231, 174, 178, 0.35),inset 0px 1px 5px 0px rgba(231, 174, 178, 0.6)
+				min-height: r(60px)
+				display: flex
+				align-items: center
+				justify-content: center
+				transition: all .2s ease-in-out
+				+pad(null .75rem)
+				h4
+					font-size: r(16px)
+					font-weight: 500
+					color: color-get($mau, main)
+					transition: all .2s ease-in-out
+		&:hover
+			figure
+				figcaption
+					+btn-hover
+					h4
+						color: white

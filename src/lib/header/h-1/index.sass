@@ -1,0 +1,215 @@
++media-breakpoint-up(lg)
+	.canhcam-header-1
+		background: color-rgba(color-get($mau, main), .85)
+		+pad(r(5px) 0)
+		position: fixed
+		width: 100%
+		left: 0
+		top: 0
+		z-index: 2000
+		.row
+			height: 100%
+		.logo
+			+pad(0 .5rem)
+			+media-breakpoint-up(lg)
+				margin-left: 50px
+			img
+				width: 100%
+				max-width: 90px
+				+media-breakpoint-up(xl)
+					max-width: 135px
+		.Module-141, .Module-142
+			height: 100%
+			.ModuleContent
+				height: 100%
+		.menu
+			display: flex
+			flex-direction: row
+			height: 100%
+			.navbar-nav
+				flex-direction: row
+				justify-content: space-around
+				align-items: center
+				width: 100%
+				height: 100%
+				>.nav-item
+					>.nav-link
+						text-transform: uppercase
+						color: darken(white, 27%)
+						font-weight: 300
+						text-decoration: none
+						+pad(0 .8rem)
+						font-size: r(14px)
+						+media-breakpoint-up(xl)
+							font-size: r(15px)
+							
+						&:hover
+							color: white
+		.social
+			display: flex
+			flex-direction: row
+			height: 100%
+			align-items: center
+			.language, .facebook, .sound-icon, .hotline
+				+mar(0 10px)
+				a
+					display: flex
+					align-items: center
+					height: 100%
+					text-transform: uppercase
+					font-size: r(13px)
+					color: darken(white, 27%)
+					font-weight: 300
+					text-decoration: none
+			.language, .facebook, .sound-icon
+				a
+					&:hover
+						color: white
+			.hotline
+				a
+					font-weight: 500
+					.icon
+						margin-right: 10px
+					&:hover
+						.link
+							span:last-child()
+								color: color-get($mau, hong)
+			.sound-icon
+				svg
+					fill: darken(white, 27%)
+					transition: all .15s ease-in-out
+					transform: translateY(-4px)
+				&:hover
+					svg
+						fill: color-get($mau, trang)
++media-breakpoint-down(md)
+	.canhcam-header-1
+		position: sticky
+		top: 0
+		z-index: 999
+		.header-wrap
+			position: relative
+			z-index: 100
+			background: color-rgba(color-get($mau, main), .85)
+			height: 60px
+			>.container
+				height: 100%
+				.menu-toggle
+					+pos(abs, 15px 20px null null)
+				#language
+					width: 30px
+					height: 30px
+					display: flex
+					justify-content: center
+					align-items: center
+					+pos(abs, 15px 140px null null)
+					a
+						color: white
+						+fz(r(13px))
+						text-decoration: none
+				#facebook
+					width: 30px
+					height: 30px
+					display: flex
+					justify-content: center
+					align-items: center
+					+pos(abs, 15px 105px null null)
+					a
+						color: white
+				#sound-icon
+					width: 30px
+					height: 30px
+					display: flex
+					justify-content: center
+					align-items: flex-start
+					+pos(abs, 15px 70px null null)
+					svg
+						fill: white
+						transition: all .3s ease-in-out
+
+		.mobile-menu
+			z-index: 1000
+			width: 375px
+			max-width: 100%
+			overflow: hidden
+			+pad(1.5rem 0)
+			background: darken(white,7%)
+			height: calc(100vh - 60px)
+			transform: translateX(375px)
+			+pos(fixed, 60px 0 null null)
+			transition: all .5s ease-in-out
+			-webkit-clip-path: polygon(50% 7%, 100% 0, 100% 100%, 50% 93%, 0 100%, 0 0)
+			clip-path: polygon(50% 7%, 100% 0, 100% 100%, 50% 93%, 0 100%, 0 0)
+			&.active
+				transform: translateX(0)
+				-webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0)
+				clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0)
+				background: white
+				box-shadow: 0 0 .5rem color-get($mau, hong)
+			.left-menu
+				margin-top: -100px
+				order: 2
+			.logo
+				order: 1
+			.right-menu
+				order: 3
+				.social
+					flex-direction: row
+					display: flex
+					align-items: center
+					justify-content: space-around
+					flex-wrap: wrap
+					.facebook
+						padding-right: 1.5rem
+						padding-top: 2rem
+						padding-bottom: 2rem
+						width: 50%
+						display: flex
+						justify-content: flex-end
+						a
+							font-size: 18px
+							color: color-get($mau, hong)
+					.sound-icon
+						padding-left: 1.5rem
+						padding-top: 2rem
+						padding-bottom: 2rem
+						width: 50%
+						display: flex
+						justify-content: flex-start
+					.hotline
+						margin-top: 2rem
+						width: 100%
+						a
+							width: 100%
+							display: flex
+							justify-content: center
+							color: color-rgba(color-get($mau, main), .85)
+							.link
+								margin-left: 1rem
+								
+			.Module-141, .Module-142
+				height: 100%
+				.ModuleContent
+					height: 100%
+			.menu
+				height: 100%
+				display: flex
+				align-items: flex-end
+				justify-content: center
+				.navbar-nav
+					text-align: center
+					.nav-item
+						position: relative
+						&:after
+							content: ''
+							width: 50px
+							height: 1px
+							background: lighten(color-get($mau, hong), 10%)
+							+pos(abs, null null .5rem 50%)
+							transform: translateX(-50%)
+						.nav-link
+							+pad(1rem 0)
+							font-size: r(20px)
+							+fw(400)
+							color: color-rgba(color-get($mau, main), .85)
+							+mar(0)

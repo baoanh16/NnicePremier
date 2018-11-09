@@ -1,0 +1,94 @@
+.canhcam-contact-1
+	background: url('../img/about_bg.jpg') no-repeat
+	background-size: cover
+	.img
+		background: url("../img/contact/c_1.jpg") no-repeat
+		background-size: cover
+		height: 100%
+		img
+			width: 100%
+			opacity: 0
+	.text
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		padding: r(30px) r(15px) r(40px) r(15px)
+		+media-breakpoint-up(md)
+			padding: 0 60px
+			padding-top: 40px
+		+media-breakpoint-up(lg)
+			padding-top: 90px
+		h2
+			font-size: r(30px)
+			+media-breakpoint-up(md)
+				font-size: r(45px)
+			+media-breakpoint-up(xl)
+				font-size: r(60px)
+			color: white
+			margin-bottom: 2rem
+			text-transform: uppercase
+			line-height: calc(70 / 60)
+		p
+			font-size: r(16px)
+			color: white
+			margin-bottom: 2rem
+		.Module
+			+media-breakpoint-up(md)
+				margin-top: 1rem
+	.wrap-form
+		.contact-form
+			.form-group
+				position: relative
+				input
+					height: r(45px)
+					background: color-rgba(white,.15)
+					width: 100%
+					+bor-rad(5px)
+					border: 0
+					outline: 0
+					color: white
+					+fz(r(13px))
+					+pad(null 15px)
+					&::placeholder
+						color: white
+					&:focus
+						box-shadow: 0 0 .5rem color-get($mau, main)
+				textarea
+					background: color-rgba(white,.15)
+					width: 100%
+					+bor-rad(5px)
+					border: 0
+					outline: 0
+					color: white
+					+fz(r(13px))
+					+pad(10px 15px)
+					height: 100px
+					&::placeholder
+						color: white
+					&:focus
+						box-shadow: 0 0 .25rem color-get($mau, main)
+				span
+					position: absolute
+					right: 30px
+					top: 14px
+					font-size: 0
+					&:before
+						color: red
+						font-size: r(16px)
+		.frm-btnwrap
+			label
+				display: none
+			.frm-btn
+				text-align: right
+				.frm-btn-reset
+					display: none
+				.frm-btn-submit
+					+btn-nm
+					color: white
+					font-size: 1rem
+					+pad(.75rem 2rem)
+					+bor-rad(10px)
+					&:after
+						content: '\e87a'
+						font-family: 'Linearicons-Free'
