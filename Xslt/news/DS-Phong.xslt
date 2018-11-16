@@ -26,10 +26,32 @@
 				<figure>
 					<div class="img">
 						<a>
+							<xsl:attribute name="data-fancybox">
+								<xsl:text>room-img-</xsl:text>
+								<xsl:value-of select="position()"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="rel">
+								<xsl:text>room-img-</xsl:text>
+								<xsl:value-of select="position()"></xsl:value-of>
+							</xsl:attribute>
+
+							<xsl:attribute name="data-caption">
+								<xsl:text>&lt;div class='d-flex caption-wrap'&gt;&lt;h4&gt;</xsl:text>
+								<xsl:value-of select="Title"></xsl:value-of>
+								<xsl:text>&lt;/h4&gt;&lt;p&gt;Loại phòng: &lt;strong&gt;</xsl:text>
+								<xsl:value-of select="SubTitle"></xsl:value-of>
+								<xsl:text>&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Sức chứa: &lt;strong&gt;</xsl:text>
+								<xsl:value-of select="BriefContent"></xsl:value-of>
+								<xsl:text>&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Giá phòng: &lt;strong&gt;</xsl:text>
+								<xsl:value-of select="FullContent"></xsl:value-of>
+								<xsl:text>&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;</xsl:text>
+							</xsl:attribute>
+
 							<xsl:attribute name="href">
-								<xsl:value-of select="Url"></xsl:value-of>
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
 							</xsl:attribute>
 							<img>
+							
 							<xsl:attribute name="src">
 								<xsl:value-of select="ImageUrl"></xsl:value-of>
 							</xsl:attribute>
