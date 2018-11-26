@@ -56,26 +56,6 @@
 					<xsl:text>image-</xsl:text>
 					<xsl:value-of select="position()"></xsl:value-of>
 				</xsl:attribute>
-				<div class="d-none">
-					<xsl:if test="position()=1">
-						<xsl:apply-templates select="NewsImages" mode="Album1"></xsl:apply-templates>
-					</xsl:if>
-					<xsl:if test="position()=2">
-						<xsl:apply-templates select="NewsImages" mode="Album2"></xsl:apply-templates>
-					</xsl:if>
-					<xsl:if test="position()=3">
-						<xsl:apply-templates select="NewsImages" mode="Album3"></xsl:apply-templates>
-					</xsl:if>
-					<xsl:if test="position()=4">
-						<xsl:apply-templates select="NewsImages" mode="Album4"></xsl:apply-templates>
-					</xsl:if>
-					<xsl:if test="position()=5">
-						<xsl:apply-templates select="NewsImages" mode="Album5"></xsl:apply-templates>
-					</xsl:if>
-					<xsl:if test="position()=6">
-						<xsl:apply-templates select="NewsImages" mode="Album6"></xsl:apply-templates>
-					</xsl:if>
-				</div>
 				<figure>
 					<div class="img">
 						<img>
@@ -94,25 +74,48 @@
 					</figcaption>
 				</figure>
 			</a>
+			<div class="d-none">
+				<xsl:if test="position()=1">
+					<xsl:apply-templates select="NewsImages" mode="Album1"></xsl:apply-templates>
+				</xsl:if>
+				<xsl:if test="position()=2">
+					<xsl:apply-templates select="NewsImages" mode="Album2"></xsl:apply-templates>
+				</xsl:if>
+				<xsl:if test="position()=3">
+					<xsl:apply-templates select="NewsImages" mode="Album3"></xsl:apply-templates>
+				</xsl:if>
+				<xsl:if test="position()=4">
+					<xsl:apply-templates select="NewsImages" mode="Album4"></xsl:apply-templates>
+				</xsl:if>
+				<xsl:if test="position()=5">
+					<xsl:apply-templates select="NewsImages" mode="Album5"></xsl:apply-templates>
+				</xsl:if>
+				<xsl:if test="position()=6">
+					<xsl:apply-templates select="NewsImages" mode="Album6"></xsl:apply-templates>
+				</xsl:if>
+			</div>
 		</div>
 	</xsl:template>
 
 	<xsl:template match="NewsImages" mode="Album1">
-		<a data-fancybox="image-1" rel="image-1">
-			<xsl:attribute name="href">
-				<xsl:value-of select="ImageUrl"></xsl:value-of>
-			</xsl:attribute>
-			<img>
-			<xsl:attribute name="src">
-				<xsl:value-of select="ImageUrl"></xsl:value-of>
-			</xsl:attribute>
-			<xsl:attribute name="alt">
-				<xsl:value-of select="Title"></xsl:value-of>
-			</xsl:attribute>
-			</img>
-		</a>
+		<xsl:if test="position()>1">
+			<a data-fancybox="image-1" rel="image-1">
+				<xsl:attribute name="href">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				</xsl:attribute>
+				<img>
+				<xsl:attribute name="src">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="alt">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+				</img>
+			</a>
+		</xsl:if>
 	</xsl:template>
 	<xsl:template match="NewsImages" mode="Album2">
+		<xsl:if test="position()>1">
 		<a data-fancybox="image-2" rel="image-2">
 			<xsl:attribute name="href">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -126,8 +129,10 @@
 			</xsl:attribute>
 			</img>
 		</a>
+		</xsl:if>
 	</xsl:template>
 	<xsl:template match="NewsImages" mode="Album3">
+		<xsl:if test="position()>1">
 		<a data-fancybox="image-3" rel="image-3">
 			<xsl:attribute name="href">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -141,8 +146,10 @@
 			</xsl:attribute>
 			</img>
 		</a>
+		</xsl:if>
 	</xsl:template>
 	<xsl:template match="NewsImages" mode="Album4">
+		<xsl:if test="position()>1">
 		<a data-fancybox="image-4" rel="image-4">
 			<xsl:attribute name="href">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -156,8 +163,10 @@
 			</xsl:attribute>
 			</img>
 		</a>
+		</xsl:if>
 	</xsl:template>
 	<xsl:template match="NewsImages" mode="Album5">
+		<xsl:if test="position()>1">
 		<a data-fancybox="image-5" rel="image-5">
 			<xsl:attribute name="href">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -171,8 +180,10 @@
 			</xsl:attribute>
 			</img>
 		</a>
+		</xsl:if>
 	</xsl:template>
 	<xsl:template match="NewsImages" mode="Album6">
+		<xsl:if test="position()>1">
 		<a data-fancybox="image-6" rel="image-6">
 			<xsl:attribute name="href">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -186,6 +197,7 @@
 			</xsl:attribute>
 			</img>
 		</a>
+		</xsl:if>
 	</xsl:template>
 
 

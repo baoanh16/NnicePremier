@@ -120,16 +120,8 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 						</div>
 					</div>
 				</div>
+				<audio src="/Data/Sites/1/skins/default/music/music.mp3" id="audio" ></audio>
 			</header>
-			<!-- <header>
-					<portal:SiteLogo ID="SiteLogo1" runat="server" />
-					<portal:SearchInput ID="SearchInput1" CssClass="search" runat="server" />
-					<portal:LanguageSelector ID="LanguageSelector1" XsltFileName="Language.xslt" ShowActive="true" runat="server" />
-					<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
-						<asp:ContentPlaceHolder ID="altContent1" runat="server">
-						</asp:ContentPlaceHolder>
-					</asp:Panel>
-				</header> -->
 			<!-- ////////////// End Header ////////////// -->
 			<!-- ////////////// Main ////////////// -->
 			<main>
@@ -148,7 +140,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 			</main>
 			<!-- ////////////// End Main ////////////// -->
 			<!-- ////////////// Footer ////////////// -->
-			<header class="canhcam-footer-1">
+			<footer class="canhcam-footer-1">
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-xl text-center text-xl-left mb-3 mb-xl-0">
@@ -163,7 +155,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 						</div>
 					</div>
 				</div>
-			</header>
+			</footer>
 			<!-- <asp:Panel ID="divAltContent2" runat="server" CssClass="altcontent2">
 						<asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
 					</asp:Panel> -->

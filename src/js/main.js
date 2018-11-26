@@ -8,21 +8,13 @@ $(window).resize(function () {
 });
 
 $(document).ready(function () {
-	if ($(window).width() >= 992) {
-		$('.canhcam-home-1 .video video').ready(function () {
-			$('.canhcam-home-1 .video video')[0].play()
-		})
-	} else {
-		$('.canhcam-home-1 video').remove()
-	}
 
 	if ($(window).width() < 992) {
-		$('.canhcam-home-2-mobile .block-video video').ready(function () {
-			$('.canhcam-home-2-mobile .block-video video')[0].play()
-		})
+		$('.canhcam-home-1 video').remove()
 	} else {
 		$('.canhcam-home-2-mobile .block-video video').remove()
 	}
+
 	cloneElems('.canhcam-header-1 .logo-wrap');
 	cloneElems('.canhcam-header-1 .language');
 	cloneElems('.canhcam-header-1 .facebook');
@@ -63,13 +55,9 @@ $(document).ready(function () {
 			}
 		}
 	});
+
 	var x = $(document).find('#multiscroll')
 	if (x.length === 1 && $(window).width() >= 992) {
-		document.querySelector('.canhcam-home-1 video').play().then(response => {
-			console.log(response);
-		}).catch(e => {
-			console.log(e);
-		});
 		$('#multiscroll-nav a').click(function (e) {
 			e.preventDefault();
 			e.stopPropagation();
@@ -95,31 +83,7 @@ $(document).ready(function () {
 		ScrollLoop: false,
 		Type: 'Scroll'
 	});
-	// if ($(window).width() >= 992) {
-
-	// 	var left = $(window).width() / 2;
-
-	// 	$('.ms-left').mouseenter(function () {
-
-	// 		$('.ms-left').width(left + 100)
-	// 		$('.ms-right').width(left - 100)
-	// 	})
-
-	// 	$('.ms-left').mouseleave(function () {
-	// 		$('.ms-left').width(left)
-	// 		$('.ms-right').width(left)
-	// 	})
-	// 	$('.ms-right').mouseenter(function () {
-	// 		$('.ms-left').width(left - 100)
-	// 		$('.ms-right').width(left + 100)
-	// 	})
-
-	// 	$('.ms-right').mouseleave(function () {
-	// 		$('.ms-left').width(left)
-	// 		$('.ms-right').width(left)
-	// 	})
-	// }
-});
+})
 
 function cloneElems(className) {
 	let html = $(className).html()
@@ -138,5 +102,26 @@ function toggleMenu() {
 		$('#facebook').toggleClass('active');
 		$('#sound-icon').toggleClass('active');
 	})
-	// }
+}
+let musicButton = document.querySelector('.sound-icon-toggle')
+let musicButton2 = document.getElementById('sound-icon')
+var cMusic = 0;
+
+musicButton.onclick = function() {
+	if (cMusic === 0) {
+		document.getElementById('audio').play()
+		cMusic = 1;
+	} else {
+		document.getElementById('audio').pause()
+		cMusic = 0;
+	}
+}
+musicButton2.onclick = function() {
+	if (cMusic === 0) {
+		document.getElementById('audio').play()
+		cMusic = 1;
+	} else {
+		document.getElementById('audio').pause()
+		cMusic = 0;
+	}
 }

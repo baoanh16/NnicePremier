@@ -64,9 +64,9 @@
 					<figcaption>
 						<h4>
 							<a>
-								<xsl:attribute name="href">
+								<!-- <xsl:attribute name="href">
 									<xsl:value-of select="Url"></xsl:value-of>
-								</xsl:attribute>
+								</xsl:attribute> -->
 								<xsl:value-of select="Title"></xsl:value-of>
 							</a>
 						</h4>
@@ -86,12 +86,7 @@
 									<xsl:apply-templates select="NewsImages" mode="Album4"></xsl:apply-templates>
 								</xsl:if>
 							</div>
-							<a class="btn view-panorama">
-								<!-- <xsl:attribute name="href">
-									<xsl:value-of select="Url"></xsl:value-of>
-								</xsl:attribute> -->
-								View panorama
-							</a>
+							<a class="btn view-panorama">View panorama</a>
 						</div>
 					</figcaption>
 				</figure>
@@ -101,6 +96,7 @@
 
 
 	<xsl:template match="NewsImages" mode="Album1">
+		<xsl:if test="position()>1">
 		<a data-fancybox="room-img-1" rel="room-img-1">
 			<xsl:attribute name="href">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -125,9 +121,11 @@
 			</xsl:attribute>
 			</img>
 		</a>
+		</xsl:if>
 	</xsl:template>
 	
 	<xsl:template match="NewsImages" mode="Album2">
+		<xsl:if test="position()>1">
 		<a data-fancybox="room-img-2" rel="room-img-2">
 			<xsl:attribute name="href">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -152,9 +150,11 @@
 			</xsl:attribute>
 			</img>
 		</a>
+		</xsl:if>
 	</xsl:template>
 
 	<xsl:template match="NewsImages" mode="Album3">
+		<xsl:if test="position()>1">
 		<a data-fancybox="room-img-3" rel="room-img-3">
 			<xsl:attribute name="href">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -179,9 +179,11 @@
 			</xsl:attribute>
 			</img>
 		</a>
+		</xsl:if>
 	</xsl:template>
 
 	<xsl:template match="NewsImages" mode="Album4">
+		<xsl:if test="position()>1">
 		<a data-fancybox="room-img-4" rel="room-img-4">
 			<xsl:attribute name="href">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -206,5 +208,6 @@
 			</xsl:attribute>
 			</img>
 		</a>
+		</xsl:if>
 	</xsl:template>
 </xsl:stylesheet>
