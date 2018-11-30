@@ -83,8 +83,14 @@ $(document).ready(function () {
 		ScrollLoop: false,
 		Type: 'Scroll'
 	});
+	fixHeight();
 })
-
+$(window).on('resize', function(){
+	fixHeight();
+})
+function fixHeight(){
+	$('.canhcam-room-1 .item .img').outerHeight($('.canhcam-room-1 .item .img').outerWidth() / 4 * 3)
+}
 function cloneElems(className) {
 	let html = $(className).html()
 	let setHtml = $(className).attr('map-to');

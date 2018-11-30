@@ -22,7 +22,7 @@
 			.btn-viewmore
 				text-transform: uppercase
 				color: white
-				+pad(.8rem 4rem .8rem 2.35rem)
+				+pad(.8rem 2.35rem)
 				border: 0
 				+btn-nm
 				border-radius: 10px
@@ -31,7 +31,10 @@
 					outline: 0
 				&:hover
 					+btn-hover
-					box-shadow: none
+				&:after
+					content: '\e87a'
+					font-family: 'Linearicons-Free'
+					margin-left: 1rem
 	+media-breakpoint-up(md)
 		.item
 			.text
