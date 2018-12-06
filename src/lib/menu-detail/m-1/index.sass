@@ -10,3 +10,42 @@
 		+pad(11rem 0)
 	.item
 		margin-bottom: 30px
+		figure
+			margin-top: 30px
+			position: relative
+			.img
+				overflow: hidden
+				img
+					transition: all .4s ease-in-out
+			figcaption
+				display: flex
+				align-items: center
+				justify-content: center
+				transition: all .4s ease-in-out
+				background: -moz-linear-gradient(315deg, rgba(32,36,145,1) 0%, rgba(212,70,229,1) 100%)
+				background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(32,36,145,1)), color-stop(100%, rgba(212,70,229,1)))
+				background: -webkit-linear-gradient(315deg, rgba(32,36,145,1) 0%, rgba(212,70,229,1) 100%)
+				background: -o-linear-gradient(315deg, rgba(32,36,145,1) 0%, rgba(212,70,229,1) 100%)
+				background: -ms-linear-gradient(315deg, rgba(32,36,145,1) 0%, rgba(212,70,229,1) 100%)
+				background: linear-gradient(135deg, rgba(32,36,145,1) 0%, rgba(212,70,229,1) 100%)
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202491', endColorstr='#d446e5',GradientType=1 )
+				padding: 1rem .75rem
+				+media-breakpoint-up(lg)
+					opacity: 0
+					position: absolute
+					width: 100%
+					bottom: 0
+					+pad(2rem .75rem)
+				h4
+					font-size: r(13px)
+					font-weight: 500
+					color: white
+					+media-breakpoint-up(lg)
+						font-size: 16px
+		&:hover
+			figure
+				.img
+					img
+						transform: scale(1.1)
+				figcaption
+					opacity: 1

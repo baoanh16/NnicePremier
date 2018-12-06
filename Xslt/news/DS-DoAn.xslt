@@ -22,27 +22,31 @@
 	<!--Begin News Child-->
 	<xsl:template match="News">
 		<div class="col-6 col-md-4">
-			<div class="item">
-				<a>
-					<!-- <xsl:attribute name="href">
-						<xsl:value-of select="Url"></xsl:value-of>
-					</xsl:attribute> -->
-					<xsl:attribute name="target">
-						<xsl:value-of select="Target"></xsl:value-of>
-					</xsl:attribute>
-					<xsl:attribute name="title">
-						<xsl:value-of select="Title"></xsl:value-of>
-					</xsl:attribute>
-					<img>
-					<xsl:attribute name="src">
-						<xsl:value-of select="ImageUrl"></xsl:value-of>
-					</xsl:attribute>
-					<xsl:attribute name="alt">
-						<xsl:value-of select="Title"></xsl:value-of>
-					</xsl:attribute>
-					</img>
-				</a>
-			</div>
+			<a class="item">
+				<xsl:attribute name="target">
+					<xsl:value-of select="Target"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="title">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+				<figure>
+					<div class="img">
+						<img>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+						</img>
+					</div>
+					<figcaption>
+						<h4>
+							<xsl:value-of select="Title"></xsl:value-of>
+						</h4>
+					</figcaption>
+				</figure>
+			</a>
 		</div>
 	</xsl:template>
 

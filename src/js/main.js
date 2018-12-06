@@ -85,11 +85,11 @@ $(document).ready(function () {
 	});
 	fixHeight();
 })
-$(window).on('resize', function(){
+$(window).on('resize', function () {
 	fixHeight();
 })
-function fixHeight(){
-	$('.canhcam-room-1 .item .img').outerHeight($('.canhcam-room-1 .item .img').outerWidth() / 4 * 3)
+function fixHeight() {
+	$('.canhcam-room-1 .item .img img').outerHeight($('.canhcam-room-1 .item .img').outerWidth() / 4 * 3)
 }
 function cloneElems(className) {
 	let html = $(className).html()
@@ -113,7 +113,7 @@ let musicButton = document.querySelector('.sound-icon-toggle')
 let musicButton2 = document.getElementById('sound-icon')
 var cMusic = 0;
 
-musicButton.onclick = function() {
+musicButton.onclick = function () {
 	if (cMusic === 0) {
 		document.getElementById('audio').play()
 		cMusic = 1;
@@ -122,7 +122,7 @@ musicButton.onclick = function() {
 		cMusic = 0;
 	}
 }
-musicButton2.onclick = function() {
+musicButton2.onclick = function () {
 	if (cMusic === 0) {
 		document.getElementById('audio').play()
 		cMusic = 1;

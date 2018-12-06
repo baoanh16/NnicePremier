@@ -56,6 +56,10 @@
 					font-weight: 300
 					margin-bottom: 0
 					+media-breakpoint-up(lg)
+						font-size: 32px
+					+media-breakpoint-up(xl)
+						font-size: 36px
+					@media (min-width: 1440px)
 						font-size: 40px
 				p
 					opacity: 0
@@ -63,11 +67,15 @@
 					transition: all .3s ease-in-out
 					transform: translateY(100px)
 					color: white
-					font-size: 13px
+					font-size: 12px
 					margin-bottom: 0
 					height: 0
 					+media-breakpoint-up(lg)
-						font-size: 16px
+						font-size: 12px
+					+media-breakpoint-up(xl)
+						font-size: 14px
+					@media (min-width: 1440px)
+						font-size: 17px
 				ul
 					opacity: 0
 					visibility: hidden
@@ -77,7 +85,13 @@
 					transform: translateY(100px)
 					li
 						color: white
-						font-size: 16px
+						font-size: 12px
+						+media-breakpoint-up(lg)
+							font-size: 12px
+						+media-breakpoint-up(xl)
+							font-size: 14px
+						@media (min-width: 1440px)
+							font-size: 17px
 				a
 					opacity: 0
 					height: 0

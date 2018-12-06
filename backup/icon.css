@@ -1,0 +1,590 @@
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	background-image: url('../img/icons.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 46px;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	zoom: 1;
+	filter: alpha(opacity=100);
+	-webkit-opacity: 1;
+	-moz-opacity: 1;
+	opacity: 1;
+	-webkit-transition: opacity 0.15s, -webkit-transform 0.15s, left 0.15s;
+	transition: opacity 0.15s, -webkit-transform 0.15s, -moz-transform 0.15s, -o-transform 0.15s, transform 0.15s, left 0.15s;
+	-webkit-transition: opacity 0.15s, transform 0.15s, left 0.15s;
+	-moz-transition: opacity 0.15s, transform 0.15s, left 0.15s;
+	-o-transition: opacity 0.15s, transform 0.15s, left 0.15s;
+	transition: opacity 0.15s, transform 0.15s, left 0.15s;
+	-webkit-transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+	transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22)
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+	.icon {
+		background-image: url('assets/src/images/icons_retina.png')
+	}
+}
+
+.icon.icon-out {
+	-webkit-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
+	zoom: 1;
+	filter: alpha(opacity=0);
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
+	opacity: 0
+}
+
+.icon.icon-in {
+	-webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1)
+}
+
+.icon-arrow,
+.icon-plus {
+	width: 15px;
+	height: 15px
+}
+
+.icon-arrow {
+	background-position: 0 -56px
+}
+
+.icon-plus {
+	background-position: -16px -56px
+}
+
+.ui-light .icon-arrow {
+	background-position: 0 -72px
+}
+
+.ui-light .icon-plus {
+	background-position: -16px -72px
+}
+
+.icon-home,
+.icon-office {
+	width: 60px;
+	height: 60px;
+	background: url(assets/dist/images/map-icons.png)
+}
+
+.icon-office {
+	background-position: 0 -66px
+}
+
+.icon-location {
+	width: 22px;
+	height: 25px;
+	background-position: 0 -420px;
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%
+}
+
+.icon-map-loading {
+	width: 32px;
+	height: 32px;
+	border-radius: 32px;
+	background: url(assets/dist/images/icon-map-loading.gif);
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%
+}
+
+.icon-pdf {
+	width: 26px;
+	height: 26px;
+	background: url(assets/dist/images/icon-pdf.png);
+	background-size: 26px 52px
+}
+
+.no-touch a:hover .icon-pdf,
+a:active .icon-pdf {
+	background-position: 0 -26px
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+	.icon-pdf {
+		background-image: url(assets/src/images/icon-pdf-retina.png)
+	}
+}
+
+.icon-phone {
+	width: 40px;
+	height: 40px;
+	background-position: -1px -472px
+}
+
+.no-touch a:hover .icon-phone,
+a:active .icon-phone {
+	background-position: -1px -512px
+}
+
+.icon-facebook-header {
+	width: 8px;
+	height: 16px;
+	background-position: -38px -446px
+}
+
+.no-touch a:hover .icon-facebook-header,
+a:active .icon-facebook-header {
+	background-position: -38px -430px
+}
+
+@media screen and (max-width: 979px) {
+	.icon-facebook-header {
+		background-position: -38px -414px
+	}
+}
+
+.icon-menu {
+	width: 22px;
+	height: 16px
+}
+
+.icon-sound {
+	background: none;
+	width: 24px;
+	height: 24px;
+	fill: #fff
+}
+
+@media screen and (min-width: 980px) {
+	.icon-sound {
+		fill: #bbb
+	}
+
+	.no-touch a:hover .icon-sound {
+		fill: #fff
+	}
+}
+
+.icon-menu {
+	background-position: 0 -17px
+}
+
+.ui-light .icon-sound {
+	fill: #5c5c5c
+}
+
+.ui-light .icon-menu {
+	background-position: -23px -17px
+}
+
+.icon-close {
+	width: 21px;
+	height: 21px;
+	background-position: 0 -34px;
+	-webkit-transition-timing-function: ease;
+	transition-timing-function: ease
+}
+
+.btn .icon-close {
+	zoom: 1;
+	filter: alpha(opacity=20);
+	-webkit-opacity: 0.2;
+	-moz-opacity: 0.2;
+	opacity: 0.2
+}
+
+.no-touch .btn:hover .icon-close {
+	zoom: 1;
+	filter: alpha(opacity=100);
+	-webkit-opacity: 1;
+	-moz-opacity: 1;
+	opacity: 1
+}
+
+.icon-close-sm {
+	width: 12px;
+	height: 12px;
+	background-position: -17px -353px
+}
+
+.icon-prev,
+.icon-next,
+.icon-prev-light,
+.icon-next-light {
+	width: 17px;
+	height: 9px
+}
+
+.icon-prev {
+	background-position: 0 -98px
+}
+
+.icon-next {
+	background-position: 0 -88px
+}
+
+.icon-prev-light {
+	background-position: -17px -98px
+}
+
+.icon-next-light {
+	background-position: -17px -88px
+}
+
+.icon-play {
+	width: 22px;
+	height: 25px;
+	background-position: 0 -151px
+}
+
+.icon-close-lg {
+	width: 31px;
+	height: 31px;
+	background-position: 0 -177px
+}
+
+.icon-play-lg,
+.icon-pause-lg {
+	width: 22px;
+	height: 25px;
+	background-position: 0 -299px
+}
+
+.icon-pause-lg {
+	background-position: -22px -299px
+}
+
+.icon-expand {
+	width: 22px;
+	height: 22px;
+	background-position: -23px -151px;
+	-webkit-transition-timing-function: ease;
+	transition-timing-function: ease
+}
+
+.icon-twitter,
+.icon-facebook {
+	width: 21px;
+	height: 18px
+}
+
+.icon-twitter {
+	background-position: 0 -209px
+}
+
+.icon-facebook {
+	background-position: -23px -209px
+}
+
+.icon-next-large,
+.icon-prev-large {
+	width: 31px;
+	height: 12px
+}
+
+.icon-next-large {
+	background-position: 0 -247px
+}
+
+.icon-prev-large {
+	background-position: 0 -260px
+}
+
+a:hover .icon-next-large,
+.icon-next-large-light {
+	background-position: 0 -273px
+}
+
+a:hover .icon-prev-large,
+.icon-prev-large-light {
+	background-position: 0 -286px
+}
+
+.icon-sidebar {
+	width: 18px;
+	height: 16px;
+	background-position: -18px -325px
+}
+
+.icon-close-sidebar {
+	width: 18px;
+	height: 18px;
+	background-position: 0 -325px
+}
+
+.icon-download {
+	width: 12px;
+	height: 10px;
+	background-position: 0 -343px
+}
+
+.icon-download-light {
+	background-position: -13px -343px
+}
+
+.icon-close-form {
+	width: 15px;
+	height: 15px;
+	background-position: 0 -354px
+}
+
+.icon-back {
+	width: 18px;
+	height: 10px;
+	background-position: -28px -343px
+}
+
+.btn-xs .icon-close-news {
+	top: 17px;
+	left: 17px
+}
+
+.icon-close-news {
+	width: 16px;
+	height: 16px;
+	background-position: 0 -370px
+}
+
+a:hover .icon-close-news {
+	background-position: -16px -370px
+}
+
+.btn .icon {
+	position: absolute
+}
+
+.btn .icon-arrow,
+.btn .icon-plus {
+	top: 20px;
+	left: 21px
+}
+
+.btn .icon-close-sm {
+	top: 22px;
+	left: 22px
+}
+
+.btn .icon-location {
+	left: 15px;
+	top: 17px
+}
+
+.btn .icon-map-loading {
+	left: 12px;
+	top: 12px
+}
+
+.btn .icon-back {
+	top: 25px;
+	left: 21px
+}
+
+.btn-xs .icon-menu {
+	top: 15px;
+	left: 17px
+}
+
+.btn-xs .icon-sound {
+	left: 13px;
+	top: 8px
+}
+
+.btn-xs .icon-sound svg {
+	left: 0;
+	top: 0
+}
+
+.btn-xs .icon-close {
+	left: 14px;
+	top: 14px
+}
+
+.btn-rect .icon-prev,
+.btn-rect .icon-next,
+.btn-rect .icon-prev-light,
+.btn-rect .icon-next-light {
+	left: 31px;
+	top: 36px
+}
+
+.btn .icon-close-sidebar {
+	left: 20px;
+	top: 20px
+}
+
+.btn-rect-alt .icon-sidebar,
+.btn-rect-alt .icon-close-sidebar {
+	left: 21px;
+	top: 22px
+}
+
+.btn .icon-twitter {
+	left: 14px;
+	top: 15px
+}
+
+.btn .icon-facebook {
+	left: 13px;
+	top: 13px
+}
+
+.no-touch .btn:hover .icon-twitter,
+.btn.active .icon-twitter {
+	background-position: 0 -228px
+}
+
+.no-touch .btn:hover .icon-facebook,
+.btn.active .icon-facebook {
+	background-position: -23px -228px
+}
+
+.btn-lg .icon-play {
+	left: 36px;
+	top: 34px
+}
+
+.btn-lg-default .icon-play-lg,
+.btn-lg-default .icon-pause-lg {
+	left: 32px;
+	top: 30px
+}
+
+.btn-xs .icon-close-lg {
+	left: 9px;
+	top: 9px
+}
+
+.btn-xs .icon-next-large,
+.btn-xs .icon-prev-large {
+	left: 0;
+	top: 18px
+}
+
+.btn-rect-gallery .icon-next-large,
+.btn-rect-alt .icon-next-large,
+.btn-rect-gallery .icon-prev-large,
+.btn-rect-alt .icon-prev-large,
+.btn-rect-gallery .icon-next-large-light,
+.btn-rect-alt .icon-next-large-light,
+.btn-rect-gallery .icon-prev-large-light,
+.btn-rect-alt .icon-prev-large-light {
+	left: 16px;
+	top: 23px
+}
+
+.btn-rect-gallery .icon-prev-large {
+	background-position: 0 -260px
+}
+
+.no-touch .btn-rect-gallery:hover .icon-prev-large,
+.no-touch .btn-rect-gallery:active .icon-prev-large {
+	background-position: 0 -260px
+}
+
+.ui-dark .btn-rect-gallery .icon-prev-large {
+	background-position: 0 -286px
+}
+
+.no-touch .ui-dark .btn-rect-gallery:hover .icon-prev-large,
+.no-touch .ui-dark .btn-rect-gallery:active .icon-prev-large {
+	background-position: 0 -286px
+}
+
+.btn .icon-download {
+	left: 18px;
+	top: 14px
+}
+
+.no-touch .btn:hover .icon-download,
+.btn.active .icon-download,
+.no-touch .btn:hover .icon-download-light,
+.btn.active .icon-download-light {
+	background-position: -13px -343px
+}
+
+.btn-xs .icon-close-form {
+	left: 17px;
+	top: 19px
+}
+
+@media screen and (max-width: 979px) and (max-height: 415px) and (orientation: landscape),
+(max-width: 668px) {
+
+	.btn .icon-arrow,
+	.btn .icon-plus {
+		top: 6px;
+		left: 6px
+	}
+
+	.btn .icon-close-sm {
+		left: 7px;
+		top: 7px
+	}
+
+	.btn .icon-back {
+		left: 11px;
+		top: 15px
+	}
+
+	.btn .icon-menu {
+		top: 7px;
+		left: 4px
+	}
+
+	.btn .icon-location {
+		left: 5px;
+		top: 7px
+	}
+
+	.btn .icon-map-loading {
+		left: 2px;
+		top: 2px
+	}
+
+	.btn-xs .icon-close-news {
+		top: 7px;
+		left: 7px
+	}
+
+	.btn-rect-alt .icon-sidebar {
+		left: 11px;
+		top: 12px
+	}
+
+	.btn-rect-alt .icon-prev-large {
+		left: 4.5px;
+		top: 14px
+	}
+
+	.btn-lg .icon-play {
+		left: 21px;
+		top: 19px
+	}
+
+	.btn.btn-default .icon-arrow {
+		top: 5px
+	}
+
+	.btn-collapsed.btn-lbl-outter.active .icon {
+		left: 0
+	}
+
+	.btn-collapsed.btn-lbl-outter.active.btn-lbl-right .icon {
+		left: auto;
+		right: 0
+	}
+
+	.btn-rect .icon-prev,
+	.btn-rect .icon-next,
+	.btn-rect .icon-prev-light,
+	.btn-rect .icon-next-light {
+		left: 18px;
+		top: 20px
+	}
+
+	.btn-rect .icon-next,
+	.btn-rect .icon-next-light {
+		left: 16px
+	}
+}
