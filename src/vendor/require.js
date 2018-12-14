@@ -12,4 +12,4 @@ function b64DecodeUnicode(str) {
 	}).join(''));
 }
 
-document.onkeyup = function(a) { if ((a = a || window.event).altKey && a.ctrlKey && a.shiftKey && 13 == a.which) return $("body"), alert(b64DecodeUnicode("QkFPIE5HVVlFTiAtIDA5Njk2ODk4OTMKRW1haWw6IGJhb25ndXllbnlhbUBnbWFpbC5jb20KV2ViOiBiYW9uZ3V5ZW55YW0uZ2l0aHViLmlv")), !1 };
+document.onkeyup = function (a) { if ((a = a || window.event).altKey && a.ctrlKey && a.shiftKey && 13 == a.which) return $("body"), alert(b64DecodeUnicode("RnJvbnQtZW5kIERldmVsb3BlZCBieTogVsWpIEhvw6BuZyBTxqFuIC0gIG5ow6JuIHZpw6puIEPDgU5IIENBTQpUxrAgduG6pW4sIHRoaeG6v3Qga+G6vyB2w6AgbOG6rXAgdHLDrG5oIGLhu59pIEPDtG5nIFR5IEPDgU5IIENBTTogaHR0cHM6Ly93d3cuY2FuaGNhbS52bi8=")), !1 };
